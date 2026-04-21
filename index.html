@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linha Paulista RP — Regras & Whitelist</title>
+  <style>
+    :root{
+      --bg:#0a0f17;--panel:#101826;--panel2:#131d2e;--text:#edf2f7;--muted:#9fb0c5;--accent:#37b7ff;--line:#223147;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#08111d,#0a0f17 35%);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+    .top{position:sticky;top:0;background:rgba(8,17,29,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .title{font-size:28px;font-weight:900}
+    .sub{color:var(--muted);font-size:14px}
+    .btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);font-weight:700;display:inline-block}
+    .btn.primary{background:var(--accent);color:#03131f;border-color:#6fd0ff}
+    .hero{padding:36px 0 18px}
+    .hero h1{font-size:48px;line-height:1.05;margin:0 0 12px}
+    .hero p{font-size:18px;color:var(--muted);max-width:760px}
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    .side,.card,.section{background:rgba(16,24,38,.88);border:1px solid var(--line);border-radius:24px}
+    .side{padding:16px;position:sticky;top:92px;height:max-content}
+    .navhead{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#72cdfb;margin-bottom:10px}
+    .nav a{display:block;padding:10px 12px;border-radius:14px;color:#dbe7f3}
+    .nav a:hover{background:var(--panel2)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 26px}
+    .card{padding:18px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);line-height:1.6}
+    .section{padding:24px;margin-bottom:16px}
+    .tag{display:inline-block;background:rgba(55,183,255,.12);color:#83d8ff;border:1px solid rgba(55,183,255,.25);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    h2{font-size:32px;margin:12px 0}
+    ul,ol{color:#d9e4ef;line-height:1.8}
+    .muted{color:var(--muted)}
+    .cta{background:linear-gradient(180deg,rgba(55,183,255,.13),rgba(55,183,255,.06));border-color:rgba(55,183,255,.25)}
+    .footer{padding:24px 0 48px;color:var(--muted);font-size:14px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero h1{font-size:34px}.side{position:static}}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="wrap brand">
+      <div>
+        <div class="title">Linha Paulista RP</div>
+        <div class="sub">Portal oficial de regras e whitelist</div>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#whitelist">Fazer whitelist</a>
+        <a class="btn" href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Entrar no Discord</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <span class="tag">Documentação oficial</span>
+      <h1>Regras, liberação e organização da Linha Paulista RP</h1>
+      <p>Um portal inspirado em documentação de servidor grande, mas com identidade própria: layout limpo, leitura rápida, regras separadas por categoria e foco total na whitelist.</p>
+      <div class="cards">
+        <div class="card"><h3>Servidor sério e organizado</h3><p>A Linha Paulista RP é voltada para roleplay sério, progressão equilibrada e uma experiência inspirada em São Paulo, com foco em civil, polícia e economia.</p></div>
+        <div class="card"><h3>Whitelist com aprovação</h3><p>A entrada acontece por análise no Discord. Após aprovação, a equipe libera o acesso ao servidor.</p></div>
+        <div class="card"><h3>Regras claras e objetivas</h3><p>Toda a base do servidor é organizada em seções, com leitura rápida, bom visual e estrutura fácil de atualizar.</p></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <aside class="side">
+        <div class="navhead">Navegação</div>
+        <nav class="nav">
+          <a href="#inicio">Linha Paulista RP</a>
+          <a href="#discord">Normas do Discord</a>
+          <a href="#gerais">Regras Gerais</a>
+          <a href="#punicoes">Punições e Regras RP</a>
+          <a href="#acoes">Regras de Ações</a>
+          <a href="#sequestro">Regras de Sequestro</a>
+          <a href="#policia">Regras da Polícia</a>
+          <a href="#faccoes">Regras de Facções</a>
+          <a href="#hospital">Regras do Hospital</a>
+          <a href="#safe">Áreas Safe</a>
+          <a href="#wipe">Wipe e Liberação</a>
+          <a href="#whitelist">Whitelist</a>
+        </nav>
+      </aside>
+
+      <main>
+        <section id="inicio" class="section">
+          <span class="tag">Linha Paulista RP</span>
+          <h2>Portal oficial</h2>
+          <p class="muted">Este site centraliza regras, processos e informações da whitelist da Linha Paulista RP. A proposta é manter tudo acessível, profissional e fácil de entender.</p>
+        </section>
+
+        <section id="discord" class="section">
+          <span class="tag">Normas do Discord</span>
+          <h2>Ambiente limpo, objetivo e profissional</h2>
+          <ul>
+            <li>Respeito obrigatório entre todos os membros.</li>
+            <li>Divulgação sem autorização é proibida.</li>
+            <li>Conteúdo impróprio, spam, flood e discussões tóxicas serão punidos.</li>
+            <li>Tickets são o meio oficial para denúncias, dúvidas e suporte.</li>
+          </ul>
+        </section>
+
+        <section id="gerais" class="section">
+          <span class="tag">Regras Gerais</span>
+          <h2>Base da cidade</h2>
+          <ol>
+            <li>É proibido sair do roleplay para citar regras, staff ou sistemas durante ações.</li>
+            <li>Uso de bugs, programas externos, manipulação de evidências ou qualquer vantagem indevida será tratado com severidade.</li>
+            <li>Toda ação deve respeitar coerência, risco, bom senso e a proposta séria da cidade.</li>
+          </ol>
+        </section>
+
+        <section id="punicoes" class="section">
+          <span class="tag">Punições e Regras RP</span>
+          <h2>Aplicação baseada em gravidade</h2>
+          <p class="muted">A equipe pode orientar, advertir, suspender ou banir conforme a gravidade da infração, histórico do jogador e impacto causado no roleplay.</p>
+        </section>
+
+        <section id="acoes" class="section">
+          <span class="tag">Regras de Ações</span>
+          <h2>Conflitos, crimes e desenvolvimento</h2>
+          <p class="muted">Toda ação deve ter motivo, risco, desenvolvimento e coerência com a proposta da cidade. Ações repetitivas, forçadas ou sem contexto serão invalidadas e punidas.</p>
+        </section>
+
+        <section id="sequestro" class="section">
+          <span class="tag">Regras de Sequestro</span>
+          <h2>Aplicação controlada</h2>
+          <p class="muted">Sequestros devem seguir critérios rígidos de contexto, risco e número de participantes, sempre respeitando limites administrativos e a integridade do RP.</p>
+        </section>
+
+        <section id="policia" class="section">
+          <span class="tag">Regras da Polícia</span>
+          <h2>Conduta e responsabilidade</h2>
+          <p class="muted">A atuação policial deve ser firme, coerente e profissional, sem abusos, corrupção indevida ou utilização da corporação para fins pessoais.</p>
+        </section>
+
+        <section id="faccoes" class="section">
+          <span class="tag">Regras de Facções</span>
+          <h2>Independência e limites</h2>
+          <p class="muted">Organizações ilegais devem agir com independência, sem alianças externas indevidas, abuso de mecânicas ou conflitos fora do padrão da cidade.</p>
+        </section>
+
+        <section id="hospital" class="section">
+          <span class="tag">Regras do Hospital</span>
+          <h2>Setor protegido e respeitado</h2>
+          <p class="muted">O hospital deve manter foco em atendimento, ética e continuidade do roleplay, sem uso indevido do serviço para ações ilegais ou emboscadas.</p>
+        </section>
+
+        <section id="safe" class="section">
+          <span class="tag">Áreas Safe</span>
+          <h2>Locais protegidos</h2>
+          <p class="muted">Áreas seguras possuem proteção especial de roleplay e devem ser respeitadas por todos os jogadores, sem abuso, ações ilegais ou quebras de imersão.</p>
+        </section>
+
+        <section id="wipe" class="section cta">
+          <span class="tag">Wipe e Liberação</span>
+          <h2>Sistema de liberação do servidor</h2>
+          <ul>
+            <li>Conecte no servidor e deixe sua identificação pronta.</li>
+            <li>Abra sua whitelist no Discord.</li>
+            <li>Após validação, a equipe ajusta seus cargos manualmente.</li>
+          </ul>
+          <a class="btn primary" href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">✅ Ir para o Discord</a>
+        </section>
+
+        <section id="whitelist" class="section">
+          <span class="tag">Whitelist</span>
+          <h2>Entrada organizada por painel e ticket</h2>
+          <ol>
+            <li>Usuário entra no servidor de whitelist.</li>
+            <li>Lê as regras e abre a whitelist no Ticket Tool.</li>
+            <li>A equipe analisa a solicitação.</li>
+            <li>Após aprovação, o acesso é liberado manualmente pela equipe.</li>
+          </ol>
+        </section>
+      </main>
+    </div>
+
+    <div class="footer">Linha Paulista RP — site em HTML estático pronto para subir na Vercel.</div>
+  </div>
+</body>
+</html>
