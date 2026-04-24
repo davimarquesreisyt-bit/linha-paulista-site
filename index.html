@@ -3,186 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal oficial de regras, whitelist e conduta da Linha Paulista RP." />
   <title>Linha Paulista RP — Regras & Whitelist</title>
   <style>
     :root{
-      --bg:#0a0f17;--panel:#101826;--panel2:#131d2e;--text:#edf2f7;--muted:#9fb0c5;--accent:#37b7ff;--line:#223147;
+      --bg:#050505;
+      --bg2:#0d0d0d;
+      --panel:#111111;
+      --panel2:#171717;
+      --text:#f5f5f5;
+      --muted:#b9b9b9;
+      --muted2:#8f8f8f;
+      --gold:#f6c400;
+      --gold2:#ffe067;
+      --line:rgba(246,196,0,.22);
+      --danger:#ff5f57;
+      --ok:#52d273;
+      --shadow:0 24px 80px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#08111d,#0a0f17 35%);color:var(--text)}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(246,196,0,.18), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(246,196,0,.12), transparent 24%),
+        linear-gradient(180deg,#000 0%,#070707 42%,#0d0d0d 100%);
+    }
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:1200px;margin:0 auto;padding:24px}
-    .top{position:sticky;top:0;background:rgba(8,17,29,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .title{font-size:28px;font-weight:900}
-    .sub{color:var(--muted);font-size:14px}
-    .btns{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);font-weight:700;display:inline-block}
-    .btn.primary{background:var(--accent);color:#03131f;border-color:#6fd0ff}
-    .hero{padding:36px 0 18px}
-    .hero h1{font-size:48px;line-height:1.05;margin:0 0 12px}
-    .hero p{font-size:18px;color:var(--muted);max-width:760px}
-    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
-    .side,.card,.section{background:rgba(16,24,38,.88);border:1px solid var(--line);border-radius:24px}
-    .side{padding:16px;position:sticky;top:92px;height:max-content}
-    .navhead{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#72cdfb;margin-bottom:10px}
-    .nav a{display:block;padding:10px 12px;border-radius:14px;color:#dbe7f3}
-    .nav a:hover{background:var(--panel2)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 26px}
+    .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+    .top{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(246,196,0,.16)}
+    .brand{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logoText{display:flex;align-items:center;gap:12px}
+    .mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--gold),#916f00);box-shadow:0 0 30px rgba(246,196,0,.22);display:grid;place-items:center;color:#050505;font-weight:1000}
+    .title{font-size:24px;font-weight:950;letter-spacing:.02em}
+    .sub{font-size:13px;color:var(--muted2);margin-top:2px}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);font-weight:800;transition:.18s ease}
+    .btn:hover{transform:translateY(-1px);border-color:var(--line)}
+    .btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#070707;border-color:transparent;box-shadow:0 14px 40px rgba(246,196,0,.2)}
+    .hero{padding:66px 0 34px;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold2);border:1px solid var(--line);background:rgba(246,196,0,.07);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    h1{font-size:clamp(42px,7vw,82px);line-height:.93;margin:18px 0 18px;letter-spacing:-.06em}
+    .hero p{font-size:19px;line-height:1.7;color:var(--muted);max-width:760px;margin:0}
+    .heroPanel{border:1px solid var(--line);background:linear-gradient(180deg,rgba(246,196,0,.08),rgba(255,255,255,.035));border-radius:30px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .heroPanel:before{content:"";position:absolute;inset:-2px;background:radial-gradient(circle at 50% 0,rgba(246,196,0,.26),transparent 45%);pointer-events:none}
+    .miniGrid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .mini{padding:18px;border-radius:22px;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.08)}
+    .mini b{display:block;font-size:28px;color:var(--gold)}
+    .mini span{color:var(--muted);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+    .alert{position:relative;margin-top:14px;padding:16px;border-radius:22px;background:rgba(246,196,0,.09);border:1px solid var(--line);color:#f5e8a3;line-height:1.55}
+    .grid{display:grid;grid-template-columns:292px 1fr;gap:24px;align-items:start;padding:18px 0 34px}
+    .side{position:sticky;top:98px;border:1px solid rgba(246,196,0,.18);background:rgba(13,13,13,.82);backdrop-filter:blur(10px);border-radius:26px;padding:16px;box-shadow:var(--shadow)}
+    .navhead{font-size:12px;color:var(--gold2);font-weight:950;letter-spacing:.16em;text-transform:uppercase;margin:6px 10px 12px}
+    .nav a{display:flex;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:16px;color:#e6e6e6;font-weight:700;font-size:14px}
+    .nav a:hover{background:rgba(246,196,0,.08);color:#fff}
+    .content{min-width:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+    .card,.section{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));border-radius:26px;box-shadow:0 20px 60px rgba(0,0,0,.22)}
     .card{padding:18px}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0;color:var(--muted);line-height:1.6}
-    .section{padding:24px;margin-bottom:16px}
-    .tag{display:inline-block;background:rgba(55,183,255,.12);color:#83d8ff;border:1px solid rgba(55,183,255,.25);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
-    h2{font-size:32px;margin:12px 0}
-    ul,ol{color:#d9e4ef;line-height:1.8}
-    .muted{color:var(--muted)}
-    .cta{background:linear-gradient(180deg,rgba(55,183,255,.13),rgba(55,183,255,.06));border-color:rgba(55,183,255,.25)}
-    .footer{padding:24px 0 48px;color:var(--muted);font-size:14px}
-    @media (max-width: 900px){.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero h1{font-size:34px}.side{position:static}}
+    .card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);line-height:1.6}
+    .section{padding:26px;margin-bottom:16px;scroll-margin-top:106px}
+    .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(246,196,0,.08);color:var(--gold2);border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:950;letter-spacing:.1em;text-transform:uppercase}
+    h2{font-size:clamp(27px,4vw,38px);margin:12px 0 8px;letter-spacing:-.035em}
+    .lead{color:var(--muted);line-height:1.75;margin:0 0 18px;font-size:16px}
+    .rules{display:grid;gap:10px;margin:16px 0 0;padding:0;list-style:none}
+    .rules li{padding:14px 16px;border-radius:18px;background:rgba(0,0,0,.26);border:1px solid rgba(255,255,255,.07);line-height:1.58;color:#e7e7e7}
+    .rules strong{color:#fff}.bad{color:#ffb0aa}.good{color:#b9f4c9}.gold{color:var(--gold2)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box{padding:16px;border-radius:20px;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.07)}
+    .box h3{margin:0 0 8px}.box p{margin:0;color:var(--muted);line-height:1.65}
+    .footer{padding:28px 0 54px;color:var(--muted2);font-size:14px;text-align:center}
+    @media (max-width:950px){.hero,.grid{grid-template-columns:1fr}.side{position:static}.cards,.two{grid-template-columns:1fr}.brand{align-items:flex-start;flex-direction:column;padding:16px 0}.btns{justify-content:flex-start}.hero{padding-top:38px}.miniGrid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <div class="top">
+  <header class="top">
     <div class="wrap brand">
-      <div>
-        <div class="title">Linha Paulista RP</div>
-        <div class="sub">Portal oficial de regras e whitelist</div>
-      </div>
+      <a class="logoText" href="#inicio" aria-label="Linha Paulista RP">
+        <div class="mark">LP</div>
+        <div><div class="title">Linha Paulista RP</div><div class="sub">Portal oficial de regras e whitelist</div></div>
+      </a>
       <div class="btns">
-        <a class="btn primary" href="#whitelist">Fazer whitelist</a>
-        <a class="btn" href="https://discord.gg/v928S6PKqH" target="_blank" rel="noreferrer">Entrar no Discord</a>
+        <a class="btn" href="#regras">Ver regras</a>
+        <a class="btn primary" href="https://discord.gg/v928S6PKqH" target="_blank" rel="noreferrer">Entrar no Discord</a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="wrap">
-    <div class="hero">
-      <span class="tag">Documentação oficial</span>
-      <h1>Regras, liberação e organização da Linha Paulista RP</h1>
-      <p>Um portal inspirado em documentação de servidor grande, mas com identidade própria: layout limpo, leitura rápida, regras separadas por categoria e foco total na whitelist.</p>
-      <div class="cards">
-        <div class="card"><h3>Servidor sério e organizado</h3><p>A Linha Paulista RP é voltada para roleplay sério, progressão equilibrada e uma experiência inspirada em São Paulo, com foco em civil, polícia e economia.</p></div>
-        <div class="card"><h3>Whitelist com aprovação</h3><p>A entrada acontece por análise no Discord. Após aprovação, a equipe libera o acesso ao servidor.</p></div>
-        <div class="card"><h3>Regras claras e objetivas</h3><p>Toda a base do servidor é organizada em seções, com leitura rápida, bom visual e estrutura fácil de atualizar.</p></div>
+  <main class="wrap" id="inicio">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Linha Paulista RP</span>
+        <h1>Regras claras para uma cidade limpa.</h1>
+        <p>A Linha Paulista RP prioriza imersão, bom senso, respeito e desenvolvimento de história. Leia tudo antes de entrar em ação: desconhecer regra não isenta punição.</p>
       </div>
-    </div>
+      <div class="heroPanel">
+        <div class="miniGrid">
+          <div class="mini"><b>RP</b><span>imersivo</span></div>
+          <div class="mini"><b>WL</b><span>via ticket</span></div>
+          <div class="mini"><b>0</b><span>tolerância a exploit</span></div>
+          <div class="mini"><b>SP</b><span>identidade própria</span></div>
+        </div>
+        <div class="alert"><strong>Atenção:</strong> denúncias, revisões e suporte devem ser tratados pelo Discord oficial, com provas e descrição objetiva.</div>
+      </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid" id="regras">
       <aside class="side">
         <div class="navhead">Navegação</div>
         <nav class="nav">
-          <a href="#inicio">Linha Paulista RP</a>
-          <a href="https://discord.gg/kn2gA6bUrX">Normas do Discord</a>
-          <a href="#gerais">Regras Gerais</a>
-          <a href="#punicoes">Punições e Regras RP</a>
-          <a href="#acoes">Regras de Ações</a>
-          <a href="#sequestro">Regras de Sequestro</a>
-          <a href="#policia">Regras da Polícia</a>
-          <a href="#faccoes">Regras de Facções</a>
-          <a href="#hospital">Regras do Hospital</a>
-          <a href="#safe">Áreas Safe</a>
-          <a href="#wipe">Wipe e Liberação</a>
+          <a href="#gerais">Regras gerais</a>
+          <a href="#termos">Termos RP</a>
+          <a href="#acoes">Ações e crimes</a>
+          <a href="#assaltos">Assaltos</a>
+          <a href="#sequestro">Sequestro</a>
+          <a href="#policia">Polícia</a>
+          <a href="#hospital">Hospital</a>
+          <a href="#faccoes">Facções</a>
+          <a href="#safe">Áreas safe</a>
+          <a href="#punicoes">Punições</a>
           <a href="#whitelist">Whitelist</a>
         </nav>
       </aside>
 
-      <main>
-        <section id="inicio" class="section">
-          <span class="tag">Linha Paulista RP</span>
-          <h2>Portal oficial</h2>
-          <p class="muted">Este site centraliza regras, processos e informações da whitelist da Linha Paulista RP. A proposta é manter tudo acessível, profissional e fácil de entender.</p>
-        </section>
+      <div class="content">
+        <div class="cards">
+          <div class="card"><h3>Roleplay acima de tudo</h3><p>Toda ação precisa de contexto, motivo e continuidade dentro da história.</p></div>
+          <div class="card"><h3>Sem vantagem indevida</h3><p>Bug abuse, exploit, macro e programas externos resultam em punição severa.</p></div>
+          <div class="card"><h3>Provas importam</h3><p>Denúncias devem conter vídeo, print e relato claro do ocorrido.</p></div>
+        </div>
 
-        <section id="discord" class="section">
-          <span class="tag">Normas do Discord</span>
-          <h2>Ambiente limpo, objetivo e profissional</h2>
-          <ul>
-            <li>Respeito obrigatório entre todos os membros.</li>
-            <li>Divulgação sem autorização é proibida.</li>
-            <li>Conteúdo impróprio, spam, flood e discussões tóxicas serão punidos.</li>
-            <li>Tickets são o meio oficial para denúncias, dúvidas e suporte.</li>
+        <section class="section" id="gerais">
+          <span class="tag">01 • Base da cidade</span>
+          <h2>Regras gerais</h2>
+          <p class="lead">A cidade funciona com respeito, coerência e bom senso. Atitudes que prejudiquem a experiência de outros jogadores podem ser punidas mesmo que não estejam escritas exatamente desta forma.</p>
+          <ul class="rules">
+            <li><strong>Respeito obrigatório:</strong> ofensas, preconceito, perseguição, assédio, discurso de ódio e toxicidade não serão tolerados.</li>
+            <li><strong>Proibido sair do personagem:</strong> não cite staff, regras, Discord, ticket ou gravação durante uma cena de RP.</li>
+            <li><strong>Proibido anti-RP:</strong> ações sem lógica, sem medo, sem contexto ou feitas apenas para atrapalhar outros jogadores.</li>
+            <li><strong>Proibido usar bugs:</strong> qualquer falha deve ser reportada. Usar bug para ganhar dinheiro, item, fuga ou vantagem é infração grave.</li>
+            <li><strong>Proibido comércio externo:</strong> venda de dinheiro, itens, contas, whitelist ou benefícios fora dos meios oficiais é proibida.</li>
           </ul>
         </section>
 
-        <section id="gerais" class="section">
-          <span class="tag">Regras Gerais</span>
-          <h2>Base da cidade</h2>
-          <ol>
-            <li>É proibido sair do roleplay para citar regras, staff ou sistemas durante ações.</li>
-            <li>Uso de bugs, programas externos, manipulação de evidências ou qualquer vantagem indevida será tratado com severidade.</li>
-            <li>Toda ação deve respeitar coerência, risco, bom senso e a proposta séria da cidade.</li>
+        <section class="section" id="termos">
+          <span class="tag">02 • Termos essenciais</span>
+          <h2>VDM, RDM, MG, PG, CL e NLR</h2>
+          <div class="two">
+            <div class="box"><h3 class="bad">VDM</h3><p>Usar veículo como arma sem contexto ou atropelar pessoas sem motivo RP.</p></div>
+            <div class="box"><h3 class="bad">RDM</h3><p>Agredir ou matar alguém sem motivo, sem desenvolvimento ou sem interação prévia.</p></div>
+            <div class="box"><h3>Metagaming</h3><p>Usar informações de fora do jogo dentro do RP, como live, Discord, chat ou call externa.</p></div>
+            <div class="box"><h3>Powergaming</h3><p>Forçar ações impossíveis, abusar de mecânicas ou não permitir reação justa.</p></div>
+            <div class="box"><h3>Combat Logging</h3><p>Sair da cidade, crashar propositalmente ou quitar durante abordagem, perseguição, prisão ou ação.</p></div>
+            <div class="box"><h3>NLR</h3><p>Após morrer e ser finalizado, você não pode lembrar da ação nem voltar imediatamente ao local.</p></div>
+          </div>
+        </section>
+
+        <section class="section" id="acoes">
+          <span class="tag">03 • Conflitos</span>
+          <h2>Regras de ações</h2>
+          <ul class="rules">
+            <li>Toda ação precisa de <strong>motivo RP</strong>, desenvolvimento e tempo mínimo para reação.</li>
+            <li>É proibido iniciar ação apenas por provocação rasa, bait, tédio ou vontade de trocar tiro.</li>
+            <li>Durante uma ação, valorize a vida. Cercado, rendido ou em desvantagem extrema, aja com medo real.</li>
+            <li>É proibido chamar reforço por Discord, live, WhatsApp ou qualquer comunicação externa.</li>
+            <li>Após uma ação, evite retornar ao local para continuar conflito sem novo contexto.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="assaltos">
+          <span class="tag">04 • Crimes comuns</span>
+          <h2>Assaltos e abordagens criminosas</h2>
+          <ul class="rules">
+            <li>Assaltos devem ter abordagem clara, voz audível e chance de reação coerente.</li>
+            <li>Proibido assaltar em áreas safe, hospital, locais de spawn ou pontos administrativos.</li>
+            <li>Proibido matar a vítima cooperativa sem motivo forte e desenvolvido no RP.</li>
+            <li>Não é permitido roubar itens sem contexto ou forçar comandos de forma anti-RP.</li>
+            <li>Assaltante e vítima devem manter a cena até o fim, sem quebrar personagem.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="sequestro">
+          <span class="tag">05 • Alto risco</span>
+          <h2>Sequestro</h2>
+          <ul class="rules">
+            <li>Sequestros precisam de motivo e planejamento. Não devem ser feitos aleatoriamente.</li>
+            <li>A vítima deve ser mantida viva enquanto cooperar, salvo contexto extremo e bem desenvolvido.</li>
+            <li>Proibido sequestrar novatos, staff em atendimento ou players em áreas safe.</li>
+            <li>Negociações devem ser feitas com bom senso, sem pedidos impossíveis ou abusivos.</li>
+            <li>A polícia deve priorizar negociação e preservação da vida da vítima.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="policia">
+          <span class="tag">06 • Corporação</span>
+          <h2>Polícia</h2>
+          <ul class="rules">
+            <li>Abordagens devem ser profissionais, claras e proporcionais ao risco.</li>
+            <li>É proibido abuso de poder, corrupção sem autorização da staff ou uso da farda para benefício pessoal.</li>
+            <li>O policial deve respeitar direitos básicos do RP: identificação, motivo da abordagem e condução coerente.</li>
+            <li>Disparos devem ocorrer apenas diante de ameaça real, fuga grave ou risco à vida.</li>
+            <li>Prisões, multas e apreensões devem seguir contexto e provas dentro do roleplay.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="hospital">
+          <span class="tag">07 • HP</span>
+          <h2>Hospital e morte</h2>
+          <ul class="rules">
+            <li>Hospital é local de atendimento e continuidade do RP, não ponto de briga ou emboscada.</li>
+            <li>É proibido iniciar ação criminosa dentro do hospital ou na porta dele.</li>
+            <li>Paramédicos devem manter neutralidade e priorizar atendimento conforme a situação.</li>
+            <li>Após ser reanimado, mantenha coerência com ferimentos e limitações da cena.</li>
+            <li>Se finalizado, aplique NLR: esqueça a ação e não retorne imediatamente.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="faccoes">
+          <span class="tag">08 • Ilegal</span>
+          <h2>Facções e organizações</h2>
+          <ul class="rules">
+            <li>Facções devem agir com identidade própria, hierarquia, território e desenvolvimento de história.</li>
+            <li>Alianças, guerras e conflitos precisam de motivo RP e aprovação quando envolverem grande impacto.</li>
+            <li>Proibido farmar ilegal de forma mecânica ignorando completamente o roleplay.</li>
+            <li>Proibido misturar membros de facções diferentes para obter vantagem em ações.</li>
+            <li>Guerras não autorizam RDM, VDM, perseguição fora de contexto ou quebra de safe zone.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="safe">
+          <span class="tag">09 • Locais protegidos</span>
+          <h2>Áreas safe</h2>
+          <p class="lead">Áreas safe são locais com proteção especial para evitar abuso e garantir continuidade do roleplay.</p>
+          <ul class="rules">
+            <li>Locais comuns de safe: hospital, spawn, garagens principais, prefeitura, delegacia e áreas administrativas.</li>
+            <li>Proibido iniciar assalto, sequestro, tiroteio ou perseguição dentro de safe zone.</li>
+            <li>Proibido correr para área safe para fugir de ação já iniciada.</li>
+            <li>Qualquer exceção deve ter autorização ou contexto administrativo claro.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="punicoes">
+          <span class="tag">10 • Administração</span>
+          <h2>Punições</h2>
+          <p class="lead">A staff pode aplicar punição conforme gravidade, histórico, intenção e impacto causado no RP.</p>
+          <div class="two">
+            <div class="box"><h3 class="gold">Leves</h3><p>Orientação, aviso, advertência ou kick.</p></div>
+            <div class="box"><h3 class="bad">Graves</h3><p>Ban temporário, reset de itens, perda de cargo ou ban permanente.</p></div>
+          </div>
+          <ul class="rules">
+            <li>Mentir em ticket, editar provas ou omitir informação pode agravar a punição.</li>
+            <li>Reincidência aumenta a gravidade da medida administrativa.</li>
+            <li>A staff tem palavra final em casos omissos, sempre visando preservar a cidade.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="whitelist">
+          <span class="tag">11 • Entrada</span>
+          <h2>Whitelist</h2>
+          <ol class="rules">
+            <li>Entre no Discord oficial da Linha Paulista RP.</li>
+            <li>Leia as regras completas antes de abrir ticket.</li>
+            <li>Abra sua whitelist pelo painel/ticket indicado.</li>
+            <li>Responda com calma, coerência e foco em roleplay sério.</li>
+            <li>Após aprovação, aguarde a liberação manual da equipe.</li>
           </ol>
-        </section>
-
-        <section id="punicoes" class="section">
-          <span class="tag">Punições e Regras RP</span>
-          <h2>Aplicação baseada em gravidade</h2>
-          <p class="muted">A equipe pode orientar, advertir, suspender ou banir conforme a gravidade da infração, histórico do jogador e impacto causado no roleplay.</p>
-        </section>
-
-        <section id="acoes" class="section">
-          <span class="tag">Regras de Ações</span>
-          <h2>Conflitos, crimes e desenvolvimento</h2>
-          <p class="muted">Toda ação deve ter motivo, risco, desenvolvimento e coerência com a proposta da cidade. Ações repetitivas, forçadas ou sem contexto serão invalidadas e punidas.</p>
-        </section>
-
-        <section id="sequestro" class="section">
-          <span class="tag">Regras de Sequestro</span>
-          <h2>Aplicação controlada</h2>
-          <p class="muted">Sequestros devem seguir critérios rígidos de contexto, risco e número de participantes, sempre respeitando limites administrativos e a integridade do RP.</p>
-        </section>
-
-        <section id="policia" class="section">
-          <span class="tag">Regras da Polícia</span>
-          <h2>Conduta e responsabilidade</h2>
-          <p class="muted">A atuação policial deve ser firme, coerente e profissional, sem abusos, corrupção indevida ou utilização da corporação para fins pessoais.</p>
-        </section>
-
-        <section id="faccoes" class="section">
-          <span class="tag">Regras de Facções</span>
-          <h2>Independência e limites</h2>
-          <p class="muted">Organizações ilegais devem agir com independência, sem alianças externas indevidas, abuso de mecânicas ou conflitos fora do padrão da cidade.</p>
-        </section>
-
-        <section id="hospital" class="section">
-          <span class="tag">Regras do Hospital</span>
-          <h2>Setor protegido e respeitado</h2>
-          <p class="muted">O hospital deve manter foco em atendimento, ética e continuidade do roleplay, sem uso indevido do serviço para ações ilegais ou emboscadas.</p>
-        </section>
-
-        <section id="safe" class="section">
-          <span class="tag">Áreas Safe</span>
-          <h2>Locais protegidos</h2>
-          <p class="muted">Áreas seguras possuem proteção especial de roleplay e devem ser respeitadas por todos os jogadores, sem abuso, ações ilegais ou quebras de imersão. Mais informações no Discord.</p>
-        </section>
-
-        <section id="wipe" class="section cta">
-          <span class="tag">Wipe e Liberação</span>
-          <h2>Sistema de liberação do servidor</h2>
-          <ul>
-            <li>Conecte no servidor e deixe sua identificação pronta.</li>
-            <li>Abra sua whitelist no Discord.</li>
-            <li>Após validação, a equipe ajusta seus cargos manualmente.</li>
-          </ul>
+          <p class="lead" style="margin-top:16px">Dica: respostas copiadas, debochadas ou sem desenvolvimento podem ser recusadas.</p>
           <a class="btn primary" href="https://discord.gg/v928S6PKqH" target="_blank" rel="noreferrer">✅ Ir para o Discord</a>
         </section>
+      </div>
+    </section>
+  </main>
 
-        <section id="whitelist" class="section">
-          <span class="tag">Whitelist</span>
-          <h2>Entrada organizada por painel e ticket</h2>
-          <ol>
-            <li>Usuário entra no servidor de whitelist.</li>
-            <li>Lê as regras e abre a whitelist no Ticket Tool.</li>
-            <li>A equipe analisa a solicitação.</li>
-            <li>Após aprovação, o acesso é liberado manualmente pela equipe.</li>
-          </ol>
-        </section>
-      </main>
-    </div>
-
-    <div class="footer">Linha Paulista RP — site em HTML estático pronto para subir na Vercel.</div>
-  </div>
+  <footer class="wrap footer">Linha Paulista RP — site estático pronto para subir na Vercel/GitHub.</footer>
 </body>
 </html>
